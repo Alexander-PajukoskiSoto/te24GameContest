@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double+Ink:wght@100..900&family=Bungee&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap');:root{
+    --cerulean: #2a68be;
+    --coralGlow: #FF8C61;
+    --white: #FFFFFF;
+    --midnightViolet:#420039;
+    --scarletFire:#FF2E00;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    background: url("./images/gameBG.png"),var(--white);
+    background-size: 1000px;
+    height: 200dvh;
+}
+
+header{
+    display: flex;
+    height: 100dvh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    background:url("./images/headerImg.png");
+    background-repeat: no-repeat;
+    background-size: 1636px;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: "Bungee","Bitcount Grid Double Ink", serif;
+    box-shadow: inset 10px 0 1000px 50px rgba(0,0,0,.5);
+
+}
+.headerContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+.headerContent p{
+    border-radius: 20px;
+    font-size: 1.2rem;
+    background-color: rgb(17, 49, 123);
+    padding: 5px;
+    box-shadow:  0 0 50px 5px black;
+    color: var(--white);
+}
+.headerContent a{
+    text-decoration: none;
+    color: var(--white);
+}
+.headerContent a img{
+    animation: jump 3s ease infinite;
+}
+header section{
+    position: sticky;
+    top:0px;
+}
+.ArrowDown{
+    width: 100px;
+}
+main{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.gameCard{
+    width: 100%;
+    height:100dvh;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    background-color: #f9eaccd5;
+    border: 20px solid black;
+}
+
+@keyframes jump {
+    50%{
+        transform: translate(0,40px);
+    }
+    
+}
