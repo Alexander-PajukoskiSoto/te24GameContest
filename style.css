@@ -67,16 +67,25 @@ main{
     justify-content: space-around;
     flex-wrap: wrap;
 }
+
 .gameCard{
-    width: 100%;
     height:100dvh;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
     background-color: #f9eaccd5;
     border: 20px solid black;
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    scroll-snap-align:center;
 }
-
+#games{
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    width: 100%;
+    flex-wrap: nowrap;
+}
 @keyframes jump {
     50%{
         transform: translate(0,40px);
