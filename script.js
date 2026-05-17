@@ -3,57 +3,71 @@
 const randomPush = ()=>{
     const gameList = [
         {
-            name: "Smurf Crashout",
-            url: "#",
-            image: "./images/Robloxhead.webp"
+            name: "Clunky Combat",
+            url: "https://zawirama-artz-founder.itch.io/clunky-combat",
+            image: "./images/ClunkyCombat.png"
         },
         {
-            name: "Some other game",
-            url: "#",
-            image: "./images/Robloxhead.webp"
+            name: "Lalulu Rampage",
+            url: "https://ironclone.itch.io/labubu-rampage",
+            image: "./images/LaluluRampage.png"
         },
         {
-            name: "Johannes Douglas",
-            url: "#",
-            image: "./images/Robloxhead.webp"
-        }
+            name: "Skyfront Battle",
+            url: "https://shahzaib57.itch.io/skyfront-battle",
+            image: "./images/skyFrontBattle.png"
+        },
+        {
+            name: "Whispering Halls",
+            url: "https://www.roblox.com/games/100990031855212/Whispering-Halls",
+            image: "./images/WhisperingHalls.png"
+        },
+        {
+            name: "Zombie Survival",
+            url: "https://darkwavedev.itch.io/zombie-survival-arena",
+            image: "./images/ZombieSurvival.png"
+        },
+
     ];
-    let randomGameList = [];
-    const gameLength = gameList.length;
-    const main = document.getElementById("games");
-    for (let i = 0; i < gameLength; i++) {
-        let gameIndex = Math.floor(Math.random() * gameList.length);
-        randomGameList[i] = gameList[gameIndex];
-        gameList.splice(gameIndex,1);
+    const randomGameList = [...gameList];
+
+    for (let i = randomGameList.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+
+        [randomGameList[i], randomGameList[j]] =
+        [randomGameList[j], randomGameList[i]];
     }
-    //  Makes random number between list length and 0
-    //  Create the section
-    console.log(randomGameList);
 
     console.log(randomGameList);
+    //  Makes random number between list length and 0
+    //  Create the section
+
+    const main = document.getElementById("games");
+    console.log(randomGameList);
+
+    
     for (let i = 0; i < randomGameList.length; i++) {
         const game = randomGameList[i];
         let gameSection = document.createElement("section");
         gameSection.className = "gameCard";
-        gameSection.id = randomGameList[i + 1].name;
 
         //  Create the image
         let gameImage = document.createElement("img");
         gameImage.src = game.image;
         gameImage.alt = game.name;
 
-        //  Create next game link
-        let nextLink = document.createElement("a");
-        let nextText = document.createTextNode(">");
-        nextLink.setAttribute("href",`#${randomGameList[i].name}`)
-        nextLink.append(nextText);
+        //  Create game link
+        const gameName = document.createTextNode(game.name);
+        const gameLink = document.createElement("a");
+        gameLink.href = game.url;
+        gameLink.target="_blank"
+        gameLink.append(gameName);
         
         //  Put it all together
         gameSection.append(gameImage);
+        gameSection.append(gameLink);
         main.append(gameSection);
-        gameSection.append(nextLink);
-        randomGameList.splice(i,1);
-        }
+    }
     
 }
 randomPush();

@@ -26,7 +26,7 @@ header{
     text-align: center;
     background:url("./images/headerImg.png");
     background-repeat: no-repeat;
-    background-size: 1636px;
+    background-size:cover;
     background-position: center;
     background-attachment: fixed;
     font-family: "Bungee","Bitcount Grid Double Ink", serif;
@@ -69,21 +69,35 @@ main{
 }
 
 .gameCard{
-    height:100dvh;
     box-sizing: border-box;
     display: flex;
-    justify-content: center;
-    background-color: #f9eaccd5;
-    border: 20px solid black;
+    background-color: var(--cerulean);
+    border: 5px solid black;
     box-sizing: border-box;
     flex: 0 0 100%;
     scroll-snap-align:center;
+    margin-top: 20px;
+    justify-content: space-around;
+    align-items: center;
+}
+.gameCard img{
+    width: clamp(180px,22dvw,300px);
+}
+.gameCard a{
+    color: var(--white);
+    text-decoration: none;
+    transition: color .4s ease;
+    font-size: clamp(1rem, 2dvw, 2rem);
+}
+.gameCard a:hover{
+    color: var(--scarletFire);
 }
 #games{
     display: flex;
+    flex-direction: column;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
-    width: 100%;
+    width:100%;
     flex-wrap: nowrap;
 }
 @keyframes jump {
