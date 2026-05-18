@@ -10,7 +10,6 @@ html{
 }
 body{
     margin: 0;
-    background: url("./images/gameBG.png"),var(--white);
     background-size: 1000px;
     height: 200dvh;
 }
@@ -24,7 +23,7 @@ header{
     box-sizing: border-box;
     padding: 20px;
     text-align: center;
-    background:url("./images/headerImg.png");
+    background:url("./images/kafeteria.jpg");
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
