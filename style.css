@@ -83,13 +83,13 @@ main{
 .gameCard img{
     width: clamp(180px,22dvw,300px);
 }
-.gameCard a{
+a{
     color: var(--white);
     text-decoration: none;
     transition: color .4s ease;
     font-size: clamp(1rem, 2dvw, 2rem);
 }
-.gameCard a:hover{
+a:hover{
     color: var(--scarletFire);
 }
 #games{
@@ -105,4 +105,12 @@ main{
         transform: translate(0,40px);
     }
     
+}
+
+footer{
+    background-color: var(--cerulean);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
