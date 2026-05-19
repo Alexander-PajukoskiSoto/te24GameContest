@@ -27,6 +27,11 @@ const randomPush = ()=>{
             url: "https://darkwavedev.itch.io/zombie-survival-arena",
             image: "./images/ZombieSurvival.png"
         },
+        {
+            name: "Wanderer",
+            url: "./sites/wanderer.html",
+            image: "./images/wanderer1.jpg"
+        },
 
     ];
     const randomGameList = [...gameList];
